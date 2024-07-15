@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweet Delights Bakery - Menu</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Base styles */
+        :root {
+            --primary-color: #ff85a2;
+            --secondary-color: #ffc0cb;
+            --accent-color: #ff1493;
+            --text-color: #333;
+            --background-color: #fff5f6;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            font-size: 16px;
+            color: var(--text-color);
+            background-color: var(--background-color);
+        }
+
+        /* Header and navigation */
+        header {
+            background-color: var(--primary-color);
+            padding: 1rem;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: white;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-weight: 300;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-color);
+        }
+
+        .hamburger {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: white;
+            cursor: pointer;
+        }
+
+        /* Menu section */
+        .menu-section {
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .menu-section h1 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 2rem;
+        }
+
+        .menu-category {
+            margin-bottom: 3rem;
+        }
+
+        .menu-category h2 {
+            font-size: 2rem;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+        }
+
+        .menu-category ul {
+            list-style: none;
+        }
+
+        .menu-category li {
+            font-size: 1.2rem;
+            color: var(--text-color);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .footer-section {
+            margin: 1rem 0;
+        }
+
+        .footer-section h4 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section p {
+            font-size: 1rem;
+        }
+
+        .copyright {
+            margin-top: 1rem;
+            font-size: 0.8rem;
+        }
+
+        /* Styles for the hamburger menu and mobile nav */
+        .hamburger {
+            display: none;
+        }
+
+        .nav-active {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 70px;
+            right: 0;
+            background-color: var(--primary-color);
+            width: 100%;
+            text-align: right;
+            padding: 1rem;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .nav-active li {
+            margin: 1rem 0;
+        }
+
+        .toggle .hamburger {
+            transform: rotate(90deg);
+        }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            .nav-links.nav-active {
+                display: flex;
+            }
+
+            .menu-section {
+                padding: 2rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Sweet Delights</div>
+            <button class="hamburger">☰</button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="menu-section">
+            <h1>Our Menu</h1>
+            <div class="menu-category">
+                <h2>Pastries</h2>
+                <ul>
+                    <li>Croissant - $2.50</li>
+                    <li>Pain au Chocolat - $3.00</li>
+                    <li>Danish Pastry - $2.75</li>
+                    <li>Éclair - $3.50</li>
+                </ul>
+            </div>
+            <div class="menu-category">
+                <h2>Cakes</h2>
+                <ul>
+                    <li>Chocolate Cake - $30.00</li>
+                    <li>Vanilla Bean Cake - $28.00</li>
+                    <li>Red Velvet Cake - $32.00</li>
+                    <li>Carrot Cake - $29.00</li>
+                </ul>
+            </div>
+            <div class="menu-category">
+                <h2>Cookies</h2>
+                <ul>
+                    <li>Chocolate Chip - $1.50</li>
+                    <li>Oatmeal Raisin - $1.50</li>
+                    <li>Peanut Butter - $1.75</li>
+                    <li>Snickerdoodle - $1.50</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Visit Us</h4>
+                <p>123 Baker Street<br>Sweetville, CA 90210</p>
+            </div>
+            <div class="footer-section">
+                <h4>Hours</h4>
+                <p>Mon-Fri: 7am - 7pm<br>Sat-Sun: 8am - 6pm</p>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>Phone: (555) 123-4567<br>Email: info@sweetdelights.com</p>
+            </div>
+        </div>
+        <p class="copyright">&copy; 2024 Sweet Delights Bakery. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Hamburger menu toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('nav-active');
+        });
+    </script>
+</body>
+</html>
